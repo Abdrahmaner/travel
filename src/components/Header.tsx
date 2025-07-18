@@ -1,4 +1,22 @@
+import { Link, useLocation } from 'react-router-dom';
+import { MapPin, Globe, Menu, X } from 'lucide-react'; // or your icon library
+import { useState } from 'react';
 
+interface HeaderProps {
+  language: 'en' | 'ar';
+  toggleLanguage: () => void;
+  t: {
+    nav: {
+      home: string;
+      about: string;
+      contact: string;
+    };
+  };
+}
+
+export default function Header({ language, toggleLanguage, t }: HeaderProps) {
+  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActive = (path: string) => location.pathname === path;
 
