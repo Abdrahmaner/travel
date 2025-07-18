@@ -1,18 +1,4 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { MapPin, Menu, X, Globe } from 'lucide-react';
 
-interface HeaderProps {
-  language: 'en' | 'ar';
-  toggleLanguage: () => void;
-  translations: any;
-}
-
-export default function Header({ language, toggleLanguage, translations }: HeaderProps) {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const location = useLocation();
-  const t = translations[language];
-  const isRTL = language === 'ar';
 
   const isActive = (path: string) => location.pathname === path;
 
