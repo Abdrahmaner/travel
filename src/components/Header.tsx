@@ -18,6 +18,7 @@ export default function Header({ language, toggleLanguage, translations }: Heade
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/4298/4298292.png">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
